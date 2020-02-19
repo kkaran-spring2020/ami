@@ -1,10 +1,10 @@
 {
     "variables": {
-        "aws_access_key": "",
-        "aws_secret_key": "",
-        "aws_region": "",
+         "aws_access_key": "{{env `aws_access_key`}}",
+        "aws_secret_key":  "{{env `aws_secret_key`}}",
+        "aws_region": "{{env `aws_region`}}",
         "source_ami": "ami-07ebfd5b3428b6f4d",
-        "ssh_username": "ubuntu"
+        "ssh_username": "myami"
     },
     "builders": [
         {
@@ -15,9 +15,9 @@
             "instance_type": "t2.micro",
             "source_ami": "{{user `source_ami`}}",
             "ssh_username": "{{user `ssh_username`}}",
-            "ami_name": "csye6225_{{timestamp}}",
-            "ami_description": "Ubuntu AMI for CSYE 6225 - Spring 2020",
-            "ami_users": "595127060238,714891973760",
+            "ami_name": "myami_{{timestamp}}",
+            "ami_description": "AMI Creation",
+            "ami_users": "720216455837,418928218825",
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
@@ -39,7 +39,15 @@
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -",
                 "sudo apt-get install -y nodejs",
                 "sudo apt update",
-                "sudo apt install mysql-server -y" 
+                "sudo apt install mysql-server -y",
+                "sudo mysql -u root -e 'CREATE user karan IDENTIFIED BY \"karan\";'",
+                "sudo mysql -u root -e \"create database cloud\";",
+                "sudo mysql -u root -e 'GRANT ALL PRIVILEGES ON cloud.* TO \"karan\";'",
+                "sudo mysql -u root -e 'FLUSH PRIVILEGES;'",
+                "sudo mysql -u nupur -pkaran -e \"use cloud\";"
+               
+
+
             ]
         }
     ]
