@@ -12,10 +12,10 @@ jobs:
       - 
         run: 
           command: |
-              packer validate ./packer/karan-ami.json
+              packer validate ./ami.json
           name: "packages Install"
       - 
         run: 
-          command: packer build ./packer/karan-ami.json
+          command: packer build ./ami.json
           name: "awscli instll"       
 version: 2
