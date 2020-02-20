@@ -4,7 +4,8 @@
         "aws_secret_key":  "{{env `aws_secret_key`}}",
         "aws_region": "{{env `aws_region`}}",
         "source_ami": "{{env `source_ami`}}",
-        "ssh_username": "ubuntu"
+        "ssh_username": "ubuntu",
+        "ami_users":"{{env `user_prod`}},{{env `user_dev`}}"
     },
     "builders": [
         {
@@ -17,7 +18,7 @@
             "ssh_username": "{{user `ssh_username`}}",
             "ami_name": "myami_{{timestamp}}",
             "ami_description": "AMI Creation",
-            "ami_users": "720216455837,418928218825",
+            "ami_users":"{{user `ami_users`}}",
             "launch_block_device_mappings": [
                 {
                     "device_name": "/dev/sda1",
