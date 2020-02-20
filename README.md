@@ -1,38 +1,38 @@
-#ami
+# ami
 
 #Student Information
 
 Name	NEU ID	Email Address
 Nupur	001357340	lnu.n@husky.neu.edu
 
-#Requirements
-Packer
+# Requirements
+- Packer
 CirclCI
 
-#Installation guide
+# Installation guide
 
-Packer Installation
+- Packer Installation
 
-#Run Instruction
+# Run Instruction
 
-##clone directory
+## clone directory
 
-##validate template
+## validate template
 
-Packer validate template.json
+## Packer validate template.json
 
-##Build Template
+## Build Template
 
-packer build -var-file=./vars.json template.json
+- packer build -var-file=./vars.json template.json
 
-#CircleCI
+# CircleCI
 
-##build_deploy job:
+## build_deploy job:
 
 - Install packer
 - validate template file
 - build the template
 
-#Output
+# Output
 
-Create AMI in accounts linked and share with accounts mentioned in ami_users object.
+- Create AMI in accounts linked and share with accounts mentioned in ami_users object.
