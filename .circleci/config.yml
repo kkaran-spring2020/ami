@@ -1,0 +1,21 @@
+--- 
+jobs: 
+  build: 
+    branches: 
+      only: 
+        - master
+    docker: 
+      - 
+        image: hashicorp/packer:1.1.1
+    steps: 
+      - checkout
+      - 
+        run: 
+          command: |
+              packer validate ami.json
+          name: "packages Install"
+      - 
+        run: 
+          command: packer build ami.json
+          name: "awscli instll"       
+version: 2
