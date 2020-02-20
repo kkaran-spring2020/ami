@@ -2,8 +2,9 @@
 
 # Student Information
 
-Name  NEU ID    Email Address
-Karan 001449291 karan.k@husky.neu.edu
+- Name: Karan
+- NEU ID: 001449291   
+- Email Address: karan.k@husky.neu.edu 
 
 # Requirements
 - Packer
