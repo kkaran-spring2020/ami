@@ -36,4 +36,4 @@ CirclCI
 
 # Output
 
-- Create AMI in accounts linked and share with accounts mentioned in ami_users object.
+- Create AMI with NodeJS installed in accounts linked and share with accounts mentioned in ami_users object.
