@@ -38,14 +38,7 @@
             "inline": [
                 "sleep 30",
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -",
-                "sudo apt-get install -y nodejs",
-                "sudo apt update",
-                "sudo apt install mysql-server -y",
-                "sudo mysql -u root -e 'CREATE user karan IDENTIFIED BY \"karan\";'",
-                "sudo mysql -u root -e \"create database cloud\";",
-                "sudo mysql -u root -e 'GRANT ALL PRIVILEGES ON cloud.* TO \"karan\";'",
-                "sudo mysql -u root -e 'FLUSH PRIVILEGES;'",
-                "sudo mysql -u karan -pkaran -e \"use cloud\";"
+                "sudo apt-get install -y nodejs"
                
 
 
