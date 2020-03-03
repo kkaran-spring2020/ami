@@ -41,9 +41,8 @@
                 "sudo apt-get install -y nodejs",
                 "sudo apt-get update",
                 "sudo apt-get install ruby",
-                "sudo apt-get install wget",
-                "cd /home/ubuntu",
-                "wget https://aws-codedeploy-{{user `aws_region`}}.s3.{{user `aws_region`}}.amazonaws.com/latest/install"
+                "sudo apt-get install wget"
+
 
             ]
         }
