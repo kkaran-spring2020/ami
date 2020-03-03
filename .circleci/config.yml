@@ -2,7 +2,7 @@ jobs:
   build: 
     branches: 
       only: 
-        - master
+        - assignment7
     docker: 
       - 
         image: hashicorp/packer:1.1.1
