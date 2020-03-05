@@ -40,7 +40,8 @@
                 "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -",
                 "sudo apt-get install -y nodejs",
                 "sudo apt-get update",
-                "sudo apt-get install ruby-full",
+                "sudo yum update -y"
+                "sudo yum install ruby -y",
                 "cd /home/ubuntu",
                 "wget https://aws-codedeploy-us-west-2.s3.amazonaws.com/latest/install",
                 "chmod +x ./install",
