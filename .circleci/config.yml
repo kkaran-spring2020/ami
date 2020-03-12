@@ -1,8 +1,5 @@
 jobs: 
   build: 
-    branches: 
-      only: 
-        - master
     docker: 
       - 
         image: hashicorp/packer:1.1.1
@@ -18,3 +15,12 @@ jobs:
           command: packer build ami.json
           name: "awscli instll"       
 version: 2
+workflows:
+  version: 2
+  build-deploy-workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
